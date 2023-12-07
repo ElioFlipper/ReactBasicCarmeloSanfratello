@@ -4,8 +4,7 @@ import { Welcome } from "./Welcome";
 export function App() {
     return(
         <div>
-            <Welcome name = "Elio" />
+            <Welcome name = "Elio" age = "28"/>
         </div>
     )
 }
-//Se non passo alcun name al component "Welcome", non verrà visualizzato nulla
