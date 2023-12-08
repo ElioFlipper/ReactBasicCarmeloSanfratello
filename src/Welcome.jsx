@@ -1,8 +1,8 @@
-export function Welcome ({name, age}){
+export function Welcome ({name, eta}){
     return (
         <div>
     <p>Welcome, <strong>{name}!</strong></p>
-    <p>Your age is {age}</p>
+    <p>Your age is {eta}</p>
     </div>
     )
 }
