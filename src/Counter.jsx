@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 
         useEffect(()=>{
             console.log(`The value of the counter is ${counter}`)
-        })
+        }, [counter, initialValue])
 
         function HandleCounterIncrement() {
             setCounter(counter + Variable)
