@@ -1,20 +1,15 @@
 import { useState } from "react"
-import { CounterDisplay } from "./CounterDisplay"
 
-    export function Counter() {
-        const [counter, setCounter ] = useState(0)
+    export function Counter({initialValue, Variable}) {
+        const [counter, setCounter ] = useState(initialValue)
 
         function HandleCounterIncrement() {
-            setCounter(counter + 1)
+            setCounter(counter + Variable)
         }
     
     return (
         <div>
-<CounterDisplay />
+           <p> I have counted <h2>{counter} </h2></p>
+            <button onClick = {HandleCounterIncrement}>Increment</button>
         </div>
-    )
-}
-
-//Ogni volta che la funziona "setter" viene chiamata per incrementare il counter, la funzione viene nuovamente eseguita da React.
-//Ogni volta che viene premuto il button, React "ricorda" il valore precedentemente renderizzato e va ad aggiornare quello,
-//non ricominciando ogni volta da 0.
+    ) }
