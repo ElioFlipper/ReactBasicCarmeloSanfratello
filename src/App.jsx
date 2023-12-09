@@ -7,7 +7,7 @@ export function App() {
     return (
         <div>
             <Welcome name = "John" eta = {75}/>
-            <Counter />
+            <Counter useState = {0} counter = {1}/>
         </div>
     )
 }
