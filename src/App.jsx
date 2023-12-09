@@ -1,13 +1,15 @@
 
 import { AlertClock } from "./AlertClock";
 import { Counter } from "./Counter";
+
+
 import { Welcome } from "./Welcome";
 
 export function App() {
     return (
         <div>
             <Welcome name = "John" eta = {75}/>
-            <Counter useState = {0} counter = {1}/>
+            <Counter initialValue={0} variable={5}/>
         </div>
     )
 }

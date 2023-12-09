@@ -1,20 +1,23 @@
-import { useState } from "react"
 import { CounterDisplay } from "./CounterDisplay"
+import { useState } from "react"
 
-    export function Counter() {
-        const [counter, setCounter ] = useState(0)
-
-        function HandleCounterIncrement() {
-            setCounter(counter + 1)
-        }
+export function Counter({initialValue, variable}){
     
+    const [counter, setCounter ] = useState(initialValue)
+
+    function HandleCounterDecrement() {
+        setCounter(counter - variable)
+    }
+
+    function HandleCounterReset() {
+        setCounter(initialValue)
+    }
+
     return (
         <div>
-<CounterDisplay />
+     <CounterDisplay  initialValue={counter} setValue={setCounter} variable={variable}/>
+     <button onClick = {HandleCounterDecrement}>Decrement</button>
+     <button onClick = {HandleCounterReset}>Reset</button>
         </div>
     )
 }
-
-//Ogni volta che la funziona "setter" viene chiamata per incrementare il counter, la funzione viene nuovamente eseguita da React.
-//Ogni volta che viene premuto il button, React "ricorda" il valore precedentemente renderizzato e va ad aggiornare quello,
-//non ricominciando ogni volta da 0.

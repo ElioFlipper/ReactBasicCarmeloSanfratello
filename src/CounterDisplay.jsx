@@ -1,12 +1,12 @@
-export function CounterDisplay(){
-    const [counter, setCounter ] = useState(0)
+export function CounterDisplay({initialValue, setValue, variable}){
 
     function HandleCounterIncrement() {
-        setCounter(counter + 1)
+        setValue(initialValue + variable)
     }
+
     return(
-        <div>
-        <p> I have counted <h2>{counter} </h2></p>
+        <div> 
+        <p> I have counted <h2>{initialValue}</h2></p>
         <button onClick = {HandleCounterIncrement}>Increment</button>
         </div>
     )
