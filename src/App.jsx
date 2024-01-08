@@ -1,17 +1,13 @@
 
-import { AlertClock } from "./AlertClock";
+import { Route, Routes } from "react-router";
 import { Counter } from "./Counter";
-import { Welcome } from "./Welcome";
 
 export function App() {
     return (
-        <div>
-            <Welcome name = "John" eta = {75}/>
-            <Counter initialValue={0} Variable={2} />
-        </div>
+        <Routes>
+            <Route path="/" element={<Counter initialValue={0} Variable={75}/>} />
+        </Routes>
     )
 }
 
-// Make it so that the event handler is received as 
-// a prop by the AlertClock component, instead of being implemented within the component itself.
 
